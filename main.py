@@ -37,7 +37,19 @@ class MyWidget(BoxLayout):
             r'\b(développeur|ingénieur|médecin|enseignant|avocat|architecte|comptable|designer|électricien|plombier|maçon|menuisier|infirmier|journaliste|pharmacien|psychologue|vétérinaire|pilote|écrivain|acteur|musicien|chanteur|danseur|peintre|sculpteur|photographe|chef|serveur|barman|cuisinier|pâtissier|agriculteur|horticulteur|pêcheur|chauffeur|mécanicien|technicien|scientifique|recherchiste|bibliothécaire|libraire|vérificateur|assistant|secrétaire|gestionnaire|administrateur|directeur|manager|consultant|analyste|spécialiste|stratège|entraîneur|coach|sportif|athlète|etc)\b',
             re.IGNORECASE
         )
-        hobby_pattern = re.compile(r'\baime\s+[a-z]+\b|\bjouer\s+à\s+[a-z]+\b|\bregarder\s+[a-z]+\b', re.IGNORECASE)
+        hobby_pattern = re.compile(
+    r'\baime\s+[a-z]+\b|\bjouer\s+à\s+[a-z]+\b|\bregarder\s+[a-z]+\b|'
+    r'\bfaire\s+de\s+[a-z]+\b|\bpratiquer\s+[a-z]+\b|\bcuisiner\s+[a-z]+\b|'
+    r'\bécouter\s+[a-z]+\b|\blire\s+[a-z]+\b|\bpeindre\s+[a-z]+\b|\bdessiner\s+[a-z]+\b|'
+    r'\bnager\s+[a-z]+\b|\bcourir\s+[a-z]+\b|\bsport\s+[a-z]+\b|'
+    r'\bjardinage\s+[a-z]+\b|\bphotographie\s+[a-z]+\b|\bvoyager\s+[a-z]+\b|'
+    r'\bchanter\s+[a-z]+\b|\bdanser\s+[a-z]+\b|\bcollectionner\s+[a-z]+\b|'
+    r'\bfaire\s+du\s+[a-z]+\b|\bfaire\s+de\s+la\s+[a-z]+\b|\bfaire\s+des\s+[a-z]+\b|'
+    r'\btravailler\s+[a-z]+\b|\bétudier\s+[a-z]+\b|\bexplorer\s+[a-z]+\b|'
+    r'\bcréer\s+[a-z]+\b|\binventer\s+[a-z]+\b|\bjouer\s+avec\s+[a-z]+\b|'
+    r'\bparticiper\s+à\s+[a-z]+\b|\bvisiter\s+[a-z]+\b|\badmirer\s+[a-z]+\b',
+    re.IGNORECASE
+)
         names = name_pattern.findall(texte)
         ages = age_pattern.findall(texte)
         jobs = job_pattern.findall(texte)
